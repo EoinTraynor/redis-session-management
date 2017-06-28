@@ -14,7 +14,7 @@ express()
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({extended: false}))
     .use(session({
-        store: new RedisStore(),        
+        store: new RedisStore({host: 'localhost', port: 6379}),        
         secret: "cool cool", 
         resave: false, 
         saveUninitialized: false

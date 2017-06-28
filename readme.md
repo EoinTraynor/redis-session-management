@@ -27,7 +27,7 @@ Redis allows us to retain a user's session even if the application server crashe
     
     __Optional*__  Use docker to launch a mysql container and expose on port 3307. You will still need to import 'sampledb.sql'
     ```bash
-    docker run -d --name test-mysql -p 3307:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=test mysql
+    docker run -d --name node-mysql -p 3307:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=test mysql
     ```
     
     <br>
@@ -38,6 +38,11 @@ Redis allows us to retain a user's session even if the application server crashe
     Confirm redis is running
     ```bash
     ps aux | grep redis-server
+    ```
+
+    __Optional*__  Use docker to launch a redis container and expose on port 6379.
+    ```bash
+    docker run -d --name node-redis -p 6379:6379 redis
     ```
 
     <br>

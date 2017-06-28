@@ -1,5 +1,5 @@
 {
-  "name": "12-generating",
+  "name": "node-redis",
   "version": "0.0.0",
   "private": true,
   "scripts": {
