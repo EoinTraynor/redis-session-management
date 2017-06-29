@@ -78,3 +78,4 @@ Users can also authenticate using their GitHub account.
     
     Create a application on your [account](https://github.com/settings/developers) > OAuth Application.
     Uncomment the GitHubStrategy in passport.js and use your clientID and clientSecret of your application.    
+
