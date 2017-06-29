@@ -69,6 +69,6 @@ Users can also authenticate using their GitHub account.
     Even though our server has been restarted our session has been retained and we are not required to log back in.  
 
 <br>
-6. **(Optional) Intergrate GitHub Authentication**
+6. __(Optional) Intergrate GitHub Authentication__
 Create a application on your [account](https://github.com/settings/developers) > OAuth Application.
 Uncomment the GitHubStrategy in passport.js and use your clientID and clientSecret of your application.    
