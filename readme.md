@@ -16,18 +16,21 @@ Users can also authenticate using their GitHub account.
 
 ## Instructions
  1. **Clone and enter the reop**
+
     ```bash
     git clone https://github.com/EoinTraynor/redis-session-management && cd redis-session-management
     ``` 
 
     <br>
  2. **Install Node Modules**
+
     ```bash
     npm install
     ```
 
     <br>
  3. **Setting up a test database**
+
     Start and connect to your mysql database and import 'sampledb.sql'. Ensure the config file 'db.js' matches your running database (i.e. port 3307).
     
     __Optional*__  Use docker to launch a mysql container and expose on port 3307. You will still need to import 'sampledb.sql'
@@ -37,6 +40,7 @@ Users can also authenticate using their GitHub account.
     
     <br>
  4. **Start Redis as a background process**
+
     ```bash
     redis-server --daemonize yes
     ```
@@ -52,6 +56,7 @@ Users can also authenticate using their GitHub account.
 
     <br>
  5. **Test the application**
+
     Run our node app
     ```bash
     nodemon server
@@ -68,7 +73,8 @@ Users can also authenticate using their GitHub account.
     Reload your browser and note that we are still logged in, accessing the authorized page.
     Even though our server has been restarted our session has been retained and we are not required to log back in.  
 
-<br>
-6. **(Optional) Intergrate GitHub Authentication**
-Create a application on your [account](https://github.com/settings/developers) > OAuth Application.
-Uncomment the GitHubStrategy in passport.js and use your clientID and clientSecret of your application.    
+    <br>
+ 6. **Integrate GitHub Authentication**
+    
+    Create a application on your [account](https://github.com/settings/developers) > OAuth Application.
+    Uncomment the GitHubStrategy in passport.js and use your clientID and clientSecret of your application.    
