@@ -8,9 +8,11 @@ const db = require("./db")
 passport.use(new localStrategy(authenticate));
 passport.use("local-register", new localStrategy({passReqToCallback: true}, register));
 
+/*
 passport.use(new GitHubStrategy({
-    clientID: "33a95abfa035bf2340e6",
-    clientSecret: "b01bb0d193be620c504e793e1be43a1187a74bbc",
+    // include your GitHub application credentials
+    clientID: "",
+    clientSecret: "",
     callbackURL: "http://localhost:3000/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, done) {
@@ -38,6 +40,7 @@ passport.use(new GitHubStrategy({
         })
   }
 ));
+*/
 
 function authenticate(email, password, done) {
     db("users")

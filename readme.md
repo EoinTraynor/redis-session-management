@@ -2,12 +2,17 @@
 This NodeJS application demonstrates the use of Redis to manage user sessions.
 In Redis, all operations and storage are performed in memory.
 Redis allows us to retain a user's session even if the application server crashes or is interrupted. 
+Users can also authenticate using their GitHub account.
 
 ## Requirements
 * [NodeJS](https://nodejs.org)
 * [MySQL](https://www.mysql.com/)
 * [Redis](https://redis.io/)
 * [Docker](https://www.docker.com/) (optional)
+
+## Other Technonogies Used
+* [ExpressJS](https://expressjs.com/)
+* [Passport JS](http://passportjs.org/)
 
 ## Instructions
  1. **Clone and enter the reop**
@@ -62,3 +67,8 @@ Redis allows us to retain a user's session even if the application server crashe
 
     Reload your browser and note that we are still logged in, accessing the authorized page.
     Even though our server has been restarted our session has been retained and we are not required to log back in.  
+
+<br>
+6. **(Optional) Intergrate GitHub Authentication**
+Create a application on your [account](https://github.com/settings/developers) > OAuth Application.
+Uncomment the GitHubStrategy in passport.js and use your clientID and clientSecret of your application.    
